@@ -1,31 +1,52 @@
-## Synopsis
+# Web Crawler
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+Simple web Crawler api rest created in java + spring boot framework.
+which given a url returns a json with the urls and link found
 
-## Code Example
+## API Methods :
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+/getShortLinks
+InPut=webPage=http://myUrl.com
+OutPut=Return a Json with the list of links of a specific page
+Execution mode: 
+http://localhost:8080/alejandroWebCrawler/api/getShortLinks?webPage=http://myUrl.com
 
-## Motivation
+/getAllLinks
+InPut=webPage=http://myUrl.com
+OutPut=Return a Json with the list of links and subLinks of a web page
+Execution mode: 
+http://localhost:8080/alejandroWebCrawler/api/getAllLinks?webPage=http://myUrl.com
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+## API OutPut :
+
+The 'output' folder contains files examples of the generated output. (methods.json)
 
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+  Name project :/alejandroWebCrawler
 
-## API Reference
+- Download the project contained in the  'project' folder
+- Import into your favorite IDE the maven project.
+- Get dependencies and Compile.
+- Add the war project in a Tomcat server
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## Tests
+## Technical Requirements: 
+ - Java 1.8
+ - Spring Boot Framework 1.5
+ - Maven
+ - Tomcat Server 8.5 
+ - Eclipse 
 
-Describe and show how to run the tests with code examples.
+## Pending
 
-## Contributors
+- Verification of input  url and handling of exceptions.
+- Add  parameter of input  the Nº of Url to look for, static at the moment.
+- Implement log4j
+- Delete final variables and implement a property
+- Implement Robot security
+- Remove rest and implement GraphQL
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-
-## License
-
-A short snippet describing the license (MIT, Apache, etc.)
+## Reference
+   netinstructions :
+   [How to make a simple web crawler in java](http://www.netinstructions.com/how-to-make-a-simple-web-crawler-in-java/).
